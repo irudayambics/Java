@@ -13,4 +13,4 @@ Spring boot microservices framework 2.3.4
 Spring JPA
 Springfox-swagger-ui 2.7.0
 MySQL 5
-HicariCP for connection pooling 
+HicariCP for connection pooling
