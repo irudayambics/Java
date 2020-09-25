@@ -1,14 +1,11 @@
 # REST API demo project for greenkoncepts
 1. A REST API that inserts records in Customer table. The API should take JSON data as input. 
 </br>
-2. A REST API that inserts records in Order table based on the previously inserted
-customer records. The API should take JSON data asinput. 
+2. A REST API that inserts records in Order table based on the previously inserted customer records. The API should take JSON data asinput. 
 </br>
-3. A REST API that returns all the data in JSON format from the customer and order table based
-on the relationship between the two. Sort the records based onCustomerName. 
+3. A REST API that returns all the data in JSON format from the customer and order table based on the relationship between the two. Sort the records based onCustomerName. 
 </br>
-4 Business logic in a method that takes a string input and counts the number of wordsin
-the string using HashMap.
+4. Business logic in a method that takes a string input and counts the number of wordsin the string using HashMap.
 </br>
 
 # Technologies used
