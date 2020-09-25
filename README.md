@@ -18,3 +18,4 @@ Java 1.8
 </br>Springfox-swagger-ui 2.7.0
 </br>MySQL 5
 </br>HicariCP for connection pooling
+
