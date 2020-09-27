@@ -21,7 +21,6 @@ import com.raj.greenkonceptsdemo.service.CustomerService;
 
 @RestController
 @RequestMapping("/api/v1/customers")
-
 public class CustomerAPI {
 	
 	@Autowired
@@ -36,5 +35,4 @@ public class CustomerAPI {
 	public ResponseEntity<List<Customer>> getCustomerOrders() {
 		return ResponseEntity.ok(customerService.listCustomerOrdersSortByCustomerName());                
     }
-
 }

@@ -4,7 +4,7 @@
 package com.raj.greenkonceptsdemo.entities;
 
 /**
- * @author user
+ * @author Irudaya Raj 
  *
  */
 public class AuxiliaryResponse {

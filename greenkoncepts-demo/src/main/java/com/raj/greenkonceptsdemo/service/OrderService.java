@@ -10,6 +10,5 @@ import com.raj.greenkonceptsdemo.entities.Order;
  */
 public interface OrderService {
 
-	public Order saveOrder(Order order);
-	
+	public Order saveOrder(Order order);	
 }

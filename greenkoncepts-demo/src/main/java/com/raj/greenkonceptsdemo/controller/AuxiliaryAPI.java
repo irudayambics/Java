@@ -19,7 +19,6 @@ import com.raj.greenkonceptsdemo.service.AuxiliaryService;
 
 @RestController
 @RequestMapping("/api/v1/auxiliary")
-
 public class AuxiliaryAPI {
 	
 	@Autowired

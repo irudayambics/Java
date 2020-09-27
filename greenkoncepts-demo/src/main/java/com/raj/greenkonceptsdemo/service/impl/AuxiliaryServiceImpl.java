@@ -20,5 +20,4 @@ public class AuxiliaryServiceImpl implements AuxiliaryService {
 	public int countWords(String sentence) {
 		return StringUtils.countWordsInSentence(sentence);
 	}
-
 }

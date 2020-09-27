@@ -8,7 +8,5 @@ package com.raj.greenkonceptsdemo.exceptions;
  *
  */
 public class InvalidDataException extends Throwable {
-
-	
 	
 }
