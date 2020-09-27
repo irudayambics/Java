@@ -39,8 +39,4 @@ public class OrderServiceImpl implements OrderService {
 		}
 	}
 
-	public List<Order> listOrdersSortByCustomerName() {
-		return orderRepository.findAll(Sort.by(Sort.Direction.DESC, "customerName"));		
-	}
-
 }

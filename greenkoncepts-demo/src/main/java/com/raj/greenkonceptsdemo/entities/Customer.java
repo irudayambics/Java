@@ -3,12 +3,20 @@
  */
 package com.raj.greenkonceptsdemo.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 /**
  * @author Irudaya Raj
@@ -30,6 +38,14 @@ public class Customer {
 
 	@Column(name = "customerAddress")
 	private String customerAddress;
+	
+	
+	@JsonManagedReference
+	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)	
+	private List<Order> orders = new ArrayList<>();
+	
+	
+	public Customer() {}
 
 	/**
 	 * @return the customerID
@@ -85,6 +101,14 @@ public class Customer {
 	 */
 	public void setCustomerAddress(String customerAddress) {
 		this.customerAddress = customerAddress;
+	}
+
+	public List<Order> getOrders() {
+		return orders;
+	}
+
+	public void setOrders(List<Order> orders) {
+		this.orders = orders;
 	}
 	
 	

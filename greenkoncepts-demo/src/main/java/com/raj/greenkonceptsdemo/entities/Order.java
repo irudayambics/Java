@@ -9,7 +9,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 
 /**
@@ -23,10 +27,13 @@ public class Order {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long orderID;
+	private long orderID;	
 	
-	@Column(name = "customerID")
-	private long customerID;
+	@JsonBackReference
+	@ManyToOne	
+	@JoinColumn(name = "customerID")
+	private Customer customer;
+	
 	
 	@Column(name = "orderDetail")
 	private String orderDetail;
@@ -35,6 +42,7 @@ public class Order {
 	@Column(name = "orderAmount")
 	private Float orderAmount;
 
+	public Order() {}
 
 	public long getOrderID() {
 		return orderID;
@@ -45,14 +53,16 @@ public class Order {
 		this.orderID = orderID;
 	}
 
+	
 
-	public long getCustomerID() {
-		return customerID;
+
+	public Customer getCustomer() {
+		return customer;
 	}
 
 
-	public void setCustomerID(long customerID) {
-		this.customerID = customerID;
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 
 

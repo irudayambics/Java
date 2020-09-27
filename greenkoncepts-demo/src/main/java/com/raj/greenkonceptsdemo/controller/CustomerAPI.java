@@ -1,7 +1,10 @@
 package com.raj.greenkonceptsdemo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +30,11 @@ public class CustomerAPI {
 	@PostMapping
     public ResponseEntity<Customer> create(@RequestBody Customer customer) {
 		return ResponseEntity.ok(customerService.saveCustomer(customer));                
+    }
+	
+	@GetMapping
+	public ResponseEntity<List<Customer>> getCustomerOrders() {
+		return ResponseEntity.ok(customerService.listCustomerOrdersSortByCustomerName());                
     }
 
 }

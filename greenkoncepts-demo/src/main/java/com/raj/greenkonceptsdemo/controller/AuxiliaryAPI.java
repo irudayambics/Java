@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.raj.greenkonceptsdemo.entities.Auxiliary;
+import com.raj.greenkonceptsdemo.entities.AuxiliaryResponse;
 import com.raj.greenkonceptsdemo.service.AuxiliaryService;
 
 /**
@@ -25,8 +26,9 @@ public class AuxiliaryAPI {
 	private AuxiliaryService auxiliaryService;
 
 	@PostMapping
-    public ResponseEntity<Integer> create(@RequestBody Auxiliary auxiliary) {
-		return ResponseEntity.ok(auxiliaryService.countWords(auxiliary.getSentence()));                
+    public ResponseEntity<AuxiliaryResponse> create(@RequestBody Auxiliary auxiliary) {
+		Integer numberOfWords = auxiliaryService.countWords(auxiliary.getSentence());
+		return ResponseEntity.ok(new AuxiliaryResponse(auxiliary.getSentence(), numberOfWords));                
     }
 	
 
