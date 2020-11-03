@@ -1,4 +1,4 @@
-# REST API demo project for greenkoncepts
+# REST API demo project
 1. A REST API that inserts records in Customer table. The API should take JSON data as input. 
 </br>
 2. A REST API that inserts records in Order table based on the previously inserted customer records. The API should take JSON data asinput. 
